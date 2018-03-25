@@ -31,9 +31,9 @@ def get_zip_list():
 
         # Reinitialize DB Connection
         con = engine.connect()
-        provider_data = pd.read_sql(db_query.sql_providers_in_zip(zip_code=zip_code),con).head()
+        md_list = pd.read_sql(db_query.sql_providers_in_zip(zip_code=zip_code),con).head()
 
-        return render_template("index.html", table=provider_data.to_html())
+        return render_template("index.html", md_list=md_list)
 
 # Index page
 @app.route('/')
@@ -43,9 +43,9 @@ def index():
     """ 
     # Initialize DB Connection
     con = engine.connect()   
-    provider_data = pd.read_sql(db_query.sql_providers_in_zip(zip_code='22903'),con).head()
+    md_list = pd.read_sql(db_query.sql_providers_in_zip(zip_code='22903'),con).head()
 
-    return render_template("index.html",table=provider_data.to_html())
+    return render_template("index.html",md_list=md_list)
 
 # With debug=True, Flask server will auto-reload 
 # when there are code changes
