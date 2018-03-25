@@ -37,17 +37,17 @@ providers = providers.drop_duplicates(subset=['National Provider Identifier','La
  'Country Code of the Provider',
  'Provider Type'],keep='first')
 
-providers.to_sql(name = 'providers', con = engine)
+providers.to_sql(name = 'providers', con = engine, if_exists = 'replace')
 
 
 providers_pos =df.drop_duplicates(subset=['National Provider Identifier','Place of Service'])
 
-providers_pos.to_sql(name = 'providers_pos', con = engine)
+providers_pos.to_sql(name = 'providers_pos', con = engine, if_exists = 'replace')
 
 
 hcpcs = df[['HCPCS Code','HCPCS Description','HCPCS Drug Indicator']].drop_duplicates()
 
-hcpcs.to_sql(name = 'hcpcs', con = engine)
+hcpcs.to_sql(name = 'hcpcs', con = engine, if_exists = 'replace')
 
 puf_2015 = df[['National Provider Identifier','HCPCS Code','Number of Services',
  'Number of Medicare Beneficiaries',
@@ -57,4 +57,4 @@ puf_2015 = df[['National Provider Identifier','HCPCS Code','Number of Services',
  'Average Medicare Payment Amount',
  'Average Medicare Standardized Amount']]
 
-puf_2015.to_sql(name='puf_hcpcs_agg',con=engine)
+puf_2015.to_sql(name='puf_hcpcs_agg',con=engine, if_exists = 'replace')
