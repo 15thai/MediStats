@@ -1,0 +1,136 @@
+#background {
+  background: #00d2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #00d2ff, #fff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #00d2ff, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	margin: 0 auto;
+	height: 100vh;
+	position: fixed;
+	z-index: -2;
+	width: 100%;
+}
+
+#cover-page {
+	width: 70%;
+	margin: 0 auto;
+	height: 800px;
+	background: #457fca; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #457fca, #5691c8); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #457fca, #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#cover-title {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 25vh;
+
+	text-align: center;
+	color: white;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+#cover-title div { margin: 0 auto; }
+#cover-title #main {
+	font-size: 6em;
+	margin: -20px auto;
+}
+#cover-title #sub {
+	margin: 0 auto;
+	font-size: 4em;
+}
+#cover-title #desc {
+	font-size: 1.5em;
+	margin-top: 10px;
+}
+
+#input-init { text-align: center; }
+#input-init button {
+	margin-top: 20px;
+	font-size: 3em;
+	width: 40%;
+}
+
+#data-entry {
+	text-align: center;
+	width: 80%;
+	margin: 20px auto;
+	background-color: white;
+	padding: 20px 20px 40px 20px;
+}
+#data-entry input {
+	font-size: 2em;
+	height: 50px;
+	margin: 20px 0;
+	text-align: center;
+}
+#data-results {
+	margin-top: 20px;
+	padding: 0 40px;
+}
+
+/*Left Pane*/
+.left-pane {
+	position: inline-block;
+	overflow: hidden;
+	width: 50%;
+	height: 400px;
+	float: left;
+}
+.left-pane img {
+	position: block;
+	width: 100%;
+	float: left;
+	object-fit: cover;
+}
+
+/*Right Pane*/
+.right-pane {
+	width: 50%;
+	float: left;
+}
+.right-pane .item {
+	padding: 10px;
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid grey;
+}
+.right-pane .item .item-title {
+	font-size: 2em;
+	color: grey;
+}
+.right-pane .item .item-website span {
+	text-size: 1.2em;
+	font-weight: bold;
+}
+.right-pane .item .right-col {
+	float: right;
+	margin-top: -55px;
+	font-size: 1.4em;
+	color: green;
+	font-weight: bold;
+	text-align: center;
+}
+.right-col .item-freq-title {
+	color: grey;
+	font-size: 0.9em;
+}
+
+footer {
+	display: -webkit-box !important;
+	background-color: #444;
+	color: white;
+	font-size: 1.3em;
+	width: 100%;
+}
+footer a { color: orange; }
+footer > div {
+	display: flex-root;
+	padding: 20px;
+	width: 70%;
+	margin: 0 auto;
+}
+footer #left-footer { float: left; }
+footer #right-footer { float: right; }

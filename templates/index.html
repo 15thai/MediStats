@@ -1,9 +1,133 @@
+<!DOCTYPE HTML>
 <html>
-<head>
 
-</head>
-<body>
-<H1>Welcome to MediStats</H1>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
 
+		<title>MedicStats</title>
 
+		<!--script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"comMediStats": ""}'>
+		</script-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!--Select 2 reference-->
+		<link href="path/to/select2.min.css" rel="stylesheet" />
+		<script src="path/to/select2.min.js"></script>
+
+		<script src="../static/js/scripts.js"></script>
+	</head>
+
+	<body>
+		<div id="background"></div>
+		<div id="cover-page">
+			<div id="cover-content">
+				<div id="cover-title">
+					<div id="sub">Welcome To</div>
+					<div id="main">MedicStats</div>
+					<div id="desc">
+						Find medical providers with the most experience for you
+					</div>
+				</div>
+				<div id="input-init">
+					<button type="button" id="start-btn" class="btn btn-info">Get Started</button>
+					<form id="data-entry" action="/action_page.php">
+						<input type="text" class="form-control" placeholder="Procedure" aria-label="zip" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" placeholder="Zip Code" aria-label="zip" aria-describedby="basic-addon1">
+						<button type="button" id="submit-btn" class="btn btn-success">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div id="data-results" class="sapUiBody">
+				<div class="data-option">
+					<div class="left-pane">
+						<!--div id="map"></div>
+				    <script>
+				      function initMap() {
+				        var uluru = {lat: -25.363, lng: 131.044};
+				        var map = new google.maps.Map(document.getElementById('map'), {
+				          zoom: 4,
+				          center: uluru
+				        });
+				        var marker = new google.maps.Marker({
+				          position: uluru,
+				          map: map
+				        });
+				      }
+				    </script>
+				    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxXwDTXmH8PcEKWjDRQHonXaUBN_tjGg&callback=initMap">
+				    </script-->
+						<img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg" width: 400px;></img>
+					</div>
+					<div class="right-pane">
+						<div class="item">
+							<div class="left-col">
+								<div class="item-title">DC Hospital</div>
+								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+							</div>
+							<div class="right-col">
+								<div class="item-freq-title">Times Performed:</div>
+								<div class="item-freq">544</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="left-col">
+								<div class="item-title">DC Hospital</div>
+								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+							</div>
+							<div class="right-col">
+								<div class="item-freq-title">Times Performed:</div>
+								<div class="item-freq">544</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="left-col">
+								<div class="item-title">DC Hospital</div>
+								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+							</div>
+							<div class="right-col">
+								<div class="item-freq-title">Times Performed:</div>
+								<div class="item-freq">544</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="left-col">
+								<div class="item-title">DC Hospital</div>
+								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+							</div>
+							<div class="right-col">
+								<div class="item-freq-title">Times Performed:</div>
+								<div class="item-freq">544</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="left-col">
+								<div class="item-title">DC Hospital</div>
+								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+							</div>
+							<div class="right-col">
+								<div class="item-freq-title">Times Performed:</div>
+								<div class="item-freq">544</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+				<div id="left-footer">Morgan Mendis, Vadim Kudlay, and Anh Thai</div>
+				<div id="right-footer">Made for <a href="http://hackuva.io/">HACK.UVA</a> 2018</div>
+			</div>
+		</footer>
+	</body>
 </html>
