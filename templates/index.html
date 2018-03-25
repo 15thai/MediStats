@@ -20,15 +20,12 @@
 		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<!--Select 2 reference-->
-		<link href="path/to/select2.min.css" rel="stylesheet" />
-		<script src="path/to/select2.min.js"></script>
-
 		<script src="../static/js/scripts.js"></script>
 	</head>
 
 	<body>
 		<div id="background"></div>
+		<div id="shadow-div"></div>
 		<div id="cover-page">
 			<div id="cover-content">
 				<div id="cover-title">
@@ -40,6 +37,7 @@
 				</div>
 				<div id="input-init">
 					<button type="button" id="start-btn" class="btn btn-info">Get Started</button>
+					<button type="button" id="learn-btn" class="btn btn-warning">Learn More</button>
 					<form id="data-entry" action="/action_page.php">
 						<input type="text" class="form-control" placeholder="Procedure" aria-label="zip" aria-describedby="basic-addon1">
 						<input type="text" class="form-control" placeholder="Zip Code" aria-label="zip" aria-describedby="basic-addon1">
@@ -47,7 +45,7 @@
 					</form>
 				</div>
 			</div>
-			<div id="data-results" class="sapUiBody">
+			<!--div id="data-results" class="sapUiBody"-->
 				<div class="data-option">
 					<div class="left-pane">
 						<!--div id="map"></div>
@@ -72,7 +70,7 @@
 						<div class="item">
 							<div class="left-col">
 								<div class="item-title">DC Hospital</div>
-								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+								<div class="item-website"><span>Address:</span> 27494 Park Drive,<br/>Orange Beach, AL 36561</div>
 							</div>
 							<div class="right-col">
 								<div class="item-freq-title">Times Performed:</div>
@@ -82,7 +80,7 @@
 						<div class="item">
 							<div class="left-col">
 								<div class="item-title">DC Hospital</div>
-								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+								<div class="item-website"><span>Address:</span> 27494 Park Drive,<br/>Orange Beach, AL 36561</div>
 							</div>
 							<div class="right-col">
 								<div class="item-freq-title">Times Performed:</div>
@@ -92,7 +90,7 @@
 						<div class="item">
 							<div class="left-col">
 								<div class="item-title">DC Hospital</div>
-								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+								<div class="item-website"><span>Address:</span> 27494 Park Drive,<br/>Orange Beach, AL 36561</div>
 							</div>
 							<div class="right-col">
 								<div class="item-freq-title">Times Performed:</div>
@@ -102,17 +100,7 @@
 						<div class="item">
 							<div class="left-col">
 								<div class="item-title">DC Hospital</div>
-								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
-							</div>
-							<div class="right-col">
-								<div class="item-freq-title">Times Performed:</div>
-								<div class="item-freq">544</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="left-col">
-								<div class="item-title">DC Hospital</div>
-								<div class="item-website"><span>Website:</span> <a href="www.chhosp.com">www.chhosp.com</a></div>
+								<div class="item-website"><span>Address:</span> 27494 Park Drive,<br/>Orange Beach, AL 36561</div>
 							</div>
 							<div class="right-col">
 								<div class="item-freq-title">Times Performed:</div>
@@ -121,7 +109,26 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			<!--/div-->
+		</div>
+		<div id="about-us">
+			<h2>Making More Easier</h2><hr/>
+			<p>
+				As health services have improved, information about them have become harder
+				to find and manage. Such is the case with procedure count; while data on the
+				number of procedures hospitals conduct is publicly available, it is very
+				diffifuclt to find and aggregate. This is a shame, as such information can
+				be used to help people make better judgements on the hospitals they choose to
+				go to.
+			</p><div class="dash"></div>
+			<p>
+				Here, we hope to be able to present the data in a simpler way
+				by focusing on the number of procedures completed by the providers. The
+				computations are based off of data from the <a href="https://data.cms.gov/Medicare-Physician-Supplier/Medicare-Provider-Utilization-and-Payment-Data-Phy/sk9b-znav">
+				Centers for Medicare & Medicaid Services</a> website. All you have to do
+				is type in a procedure and your ZIP code you'll be all set.
+			</p>
+			<button type="button" id="return-btn" class="btn btn-warning">Return</button>
 		</div>
 		<footer>
 			<div>
