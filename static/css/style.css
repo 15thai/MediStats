@@ -132,6 +132,9 @@ body {
 	float: left;
 	object-fit: cover;
 }
+.left-pane button {
+	display:block;
+}
 
 /*Right Pane*/
 .right-pane {
@@ -154,7 +157,7 @@ body {
 }
 .right-pane .item .right-col {
 	float: right;
-	margin-top: -55px;
+	margin-top: -70px;
 	font-size: 1.4em;
 	color: green;
 	font-weight: bold;
