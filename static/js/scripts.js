@@ -1,18 +1,32 @@
 $(document).ready(function(){
   $("#data-results").hide();
+  $(".data-option").hide();
   $("#data-entry").hide();
   $("#submit-btn").hide();
+  $("#about-us").hide();
+  $("#shadow-div").hide();
 
   $("#start-btn").click(function(){
     $("#submit-btn").toggle();
     $("#data-entry").slideToggle(500);
     $(this).hide();
+    $("#learn-btn").toggle();
+  });
+
+  $("#return-btn").click(function(){
+    $("#shadow-div").slideToggle(600);
+    $("#about-us").slideToggle(500);
   });
 
   $("#submit-btn").click(function(){
     $("#input-init").slideToggle(500);
     $("#cover-title").css("padding-top", "2vh");
-    $("#data-results").slideToggle(500);
+    $(".data-option").slideToggle(500);
+  });
+
+  $("#learn-btn, #shadow-div").click(function(){
+    $("#about-us").slideToggle(600);
+    $("#shadow-div").slideToggle(500);
   });
 
   $("#data-entry input").keyup(function(event) {
