@@ -23,21 +23,29 @@ engine = create_engine(db_uri)
 
 @app.route('/zip_code',methods=['POST','GET'])
 def get_zip_list():
+    """
+    Return 5 providers based on zipcode
+    """
     if request.method == 'POST':
-        zip_code = request.form.getlist('zip_code')
+        zip_code = request.form.getlist('zip_code')[0]
 
         # Reinitialize DB Connection
-        con = engine.connection()
-        provider_data = pd.read_sql(db_query.sql_providers_in_zip(zip_code=zip_code),bc)
-        return render_template("provider_list.html", provider_list=provider_data.to_html())
+        con = engine.connect()
+        provider_data = pd.read_sql(db_query.sql_providers_in_zip(zip_code=zip_code),con).head()
+
+        return render_template("index.html", table=provider_data.to_html())
 
 # Index page
 @app.route('/')
 def index():
     """
     Welcome page of MediStats
-    """    
-    return render_template("index.html",)
+    """ 
+    # Initialize DB Connection
+    con = engine.connect()   
+    provider_data = pd.read_sql(db_query.sql_providers_in_zip(zip_code='22903'),con).head()
+
+    return render_template("index.html",table=provider_data.to_html())
 
 # With debug=True, Flask server will auto-reload 
 # when there are code changes
