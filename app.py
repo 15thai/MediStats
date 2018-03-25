@@ -1,5 +1,12 @@
+#
+"""
+The neessary files should be installed with python pip install -r requirements.txs
+"""
+import os
+
 from flask import Flask, render_template, request
 from jinja2 import Environment
+from sqlalchemy import create_engine
 
 import pandas as pd
 
@@ -8,6 +15,9 @@ from data_connect import db_query
 
 app = Flask(__name__)
 
+db_uri = os.environ['SQLALCHEMY_DATABASE_URI']
+
+engine = create_engine(db_uri)
 
 # Get Doctors in Zip Code
 
